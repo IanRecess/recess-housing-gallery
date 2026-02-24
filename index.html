@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brands Activating at Student Housing — Recess</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f9f9f7;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1a1a1a;
+    }
+
+    .logo span { color: #5b5ef4; }
+
+    .cta-header {
+      display: inline-block;
+      background: #5b5ef4;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-header:hover { background: #4a4de0; }
+
+    .hero {
+      padding: 64px 40px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 620px;
+      margin: 0 auto 32px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .stat { text-align: center; }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: 700;
+      color: #5b5ef4;
+      display: block;
+      letter-spacing: -0.5px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #999;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .gallery {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    .gallery-section { margin-bottom: 64px; }
+
+    .gallery-section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .gallery-section .section-desc {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+      margin-top: 8px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .photo-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e9e9e9;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .photo-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #f0f0f0;
+    }
+
+    .photo-meta { padding: 14px 16px; }
+
+    .brand-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+
+    .venue-name {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+
+    .tag-housing { background: #eef0ff; color: #5b5ef4; }
+    .tag-fitness { background: #e8f8f0; color: #2a9d60; }
+    .tag-brand { background: #fff4e5; color: #d48000; }
+
+    .cta-section {
+      background: #5b5ef4;
+      color: #fff;
+      text-align: center;
+      padding: 72px 40px;
+    }
+
+    .cta-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      opacity: 0.85;
+      margin-bottom: 32px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-main {
+      display: inline-block;
+      background: #fff;
+      color: #5b5ef4;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px; }
+      .hero { padding: 40px 20px 32px; }
+      .hero h1 { font-size: 26px; }
+      .gallery { padding: 0 16px 60px; }
+      .stats { gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">rece<span>ss</span></div>
+  <a href="https://app.recess.is/register" class="cta-header">Get Sponsorship Offers →</a>
+</header>
+
+<div class="hero">
+  <h1>Real Brands.<br>Real Activations.<br>Real Student Housing.</h1>
+  <p>These are actual campaigns that ran at student housing properties through Recess. Brands came to them. Operators got paid.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-number">355</span>
+      <span class="stat-label">Brands on Recess</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">5,585</span>
+      <span class="stat-label">Housing Activations</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">764</span>
+      <span class="stat-label">Venues Paid in 2025</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">29K+</span>
+      <span class="stat-label">Offers Submitted</span>
+    </div>
+  </div>
+</div>
+
+<div class="gallery">
+
+  <div class="gallery-section">
+    <div class="section-label">Student Housing Activations</div>
+    <h2>At the property. With your residents.</h2>
+    <p class="section-desc">Brands activating directly at university housing venues — common areas, move-in events, community programming.</p>
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1759936635/default/snjv3xtcr0ks6zhlpwkn.jpg" alt="Alka-Seltzer at Lapis" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Alka-Seltzer</div>
+          <div class="venue-name">Lapis — Cardinal Group</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1759268906/default/f2npqtmgtwis5xxhzvxm.jpg" alt="Alka-Seltzer at Atmosphere Lincoln" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Alka-Seltzer</div>
+          <div class="venue-name">Atmosphere Lincoln — Cardinal Group</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1765230394/default/xocqbehbicfsoxi9em2v.jpg" alt="Alka-Seltzer at Atlas at Richland Road" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Alka-Seltzer</div>
+          <div class="venue-name">Atlas at Richland Road — Cardinal Group</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1759946537/default/luxmn0ggvnlrbnzitaky.jpg" alt="Ghost Energy at College Town at USF" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Ghost Energy</div>
+          <div class="venue-name">College Town at USF</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1730925531/default/rfgc0gkhxdfd1ajbs3nm.jpg" alt="Garden Veggie Snacks at Georgia Tech" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Garden Veggie Snacks</div>
+          <div class="venue-name">Catalyst @ Georgia Tech, SCAD, Georgia State</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1730925633/default/kzxrhd9gsxlpphg0quzw.jpg" alt="Garden Veggie Snacks at Georgia Tech" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Garden Veggie Snacks</div>
+          <div class="venue-name">Catalyst @ Georgia Tech, SCAD, AUC & Emory</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1761585182/default/ekzy9fjhmctlpzg8rhyp.jpg" alt="Stok Cold Brew at The Grove at Auburn" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Stok Cold Brew</div>
+          <div class="venue-name">The Grove at Auburn</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1761585200/default/u6kq0dh30hkpgzyozvfe.jpg" alt="Stok Cold Brew at The Grove at Auburn" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Stok Cold Brew</div>
+          <div class="venue-name">The Grove at Auburn</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1761585196/default/trubkkg7rwkcbrsgw07g.jpg" alt="Stok Cold Brew at The Grove at Auburn" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Stok Cold Brew</div>
+          <div class="venue-name">The Grove at Auburn</div>
+          <span class="tag tag-housing">Student Housing</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gallery-section">
+    <div class="section-label">Brands You Recognize</div>
+    <h2>Heineken, Amazing Grass, Arm &amp; Hammer, and more.</h2>
+    <p class="section-desc">Major brands that activate across the Recess network — and are looking for their next venue.</p>
+    <div class="photo-grid">
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1756831310/default/wp3cv5radnle78gg1dov.jpg" alt="Heineken at Tough Mudder Chicago" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Heineken</div>
+          <div class="venue-name">Tough Mudder Chicago</div>
+          <span class="tag tag-brand">Major Brand</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1745871135/default/qapvtmscuwjcxhrcznmg.jpg" alt="Heineken at Savage Race" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Heineken</div>
+          <div class="venue-name">Savage Race — Gainesville 2025</div>
+          <span class="tag tag-brand">Major Brand</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1744398857/default/wuh0mskxd88zzbefadyw.jpg" alt="Arm and Hammer at Tough Mudder" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Arm &amp; Hammer</div>
+          <div class="venue-name">Tough Mudder Los Angeles</div>
+          <span class="tag tag-brand">Major Brand</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1760363635/default/p0veitiy0c9rgukgps9z.jpg" alt="Amazing Grass at UCF" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">Amazing Grass</div>
+          <div class="venue-name">University of Central Florida Memory Mall</div>
+          <span class="tag tag-fitness">5K / Fitness</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1765740001/default/df4llnpp3tfkjnj3amqv.jpg" alt="La Colombe Coffee at Chicago 5K" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">La Colombe Coffee</div>
+          <div class="venue-name">Run for Coffee Lovers 5K — Chicago/Evanston</div>
+          <span class="tag tag-fitness">5K / Fitness</span>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/c_fit,q_100,w_1600/v1727141079/default/kmqimk5oatbojs1e1t0x.jpg" alt="ZenWTR at Jackalope Arts" loading="lazy">
+        <div class="photo-meta">
+          <div class="brand-name">ZenWTR</div>
+          <div class="venue-name">Jackalope Indie Artisan Fair — Pasadena</div>
+          <span class="tag tag-brand">Major Brand</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <h2>Your property could be next.</h2>
+  <p>355 brands are on Recess right now, looking for venues like yours. Listing takes 2 minutes.</p>
+  <a href="https://app.recess.is/register" class="cta-main">Get Sponsorship Offers</a>
+</div>
+
+</body>
+</html>
