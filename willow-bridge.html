@@ -6,92 +6,39 @@
   <title>Willow Bridge × Recess</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
     :root {
-      --teal:      #13bad5;
-      --teal-dim:  rgba(19,186,213,0.12);
-      --orange:    #ff8900;
-      --black:     #0a0a0a;
-      --dark:      #111214;
-      --dark2:     #1a1c1f;
-      --mid:       #2e3035;
-      --gray-600:  #6b7280;
-      --gray-400:  #9ca3af;
-      --gray-200:  #e5e7eb;
-      --gray-100:  #f8f9fa;
-      --white:     #ffffff;
+      --teal: #13bad5; --teal-dim: rgba(19,186,213,0.12); --orange: #ff8900;
+      --black: #0a0a0a; --dark: #111214; --gray-600: #6b7280; --gray-400: #9ca3af;
+      --gray-200: #e5e7eb; --gray-100: #f8f9fa; --white: #ffffff;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--white); color: var(--black); -webkit-font-smoothing: antialiased; }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--black);
-      padding: 0 52px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+    header { background: var(--black); padding: 0 52px; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .header-left { display: flex; align-items: center; gap: 16px; }
     .recess-logo { height: 22px; filter: brightness(0) invert(1); opacity: 0.9; }
     .header-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
     .header-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; }
-    .header-badge {
-      font-size: 11px; font-weight: 700; color: var(--teal);
-      background: var(--teal-dim); border: 1px solid rgba(19,186,213,0.2);
-      padding: 4px 10px; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase;
-    }
+    .header-badge { font-size: 11px; font-weight: 700; color: var(--teal); background: var(--teal-dim); border: 1px solid rgba(19,186,213,0.2); padding: 4px 10px; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase; }
 
-    /* ── HERO ── */
     .hero { background: var(--dark); padding: 72px 52px 64px; position: relative; overflow: hidden; }
-    .hero::before {
-      content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(19,186,213,0.1) 0%, transparent 65%); pointer-events: none;
-    }
-    .hero::after {
-      content: ''; position: absolute; bottom: -60px; left: -60px; width: 350px; height: 350px;
-      background: radial-gradient(circle, rgba(255,137,0,0.07) 0%, transparent 60%); pointer-events: none;
-    }
+    .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(19,186,213,0.1) 0%, transparent 65%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,137,0,0.07) 0%, transparent 60%); pointer-events: none; }
     .hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim);
-      border: 1px solid rgba(19,186,213,0.2); color: var(--teal); font-size: 10.5px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 1.2px; padding: 5px 13px; border-radius: 100px; margin-bottom: 28px;
-    }
-    .hero-eyebrow span {
-      width: 5px; height: 5px; background: var(--teal); border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim); border: 1px solid rgba(19,186,213,0.2); color: var(--teal); font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 5px 13px; border-radius: 100px; margin-bottom: 28px; }
+    .hero-eyebrow span { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 58px); font-weight: 900; letter-spacing: -0.035em;
-      line-height: 1.02; color: var(--white); margin-bottom: 20px; max-width: 720px;
-    }
+    .hero h1 { font-size: clamp(36px, 5vw, 58px); font-weight: 900; letter-spacing: -0.035em; line-height: 1.02; color: var(--white); margin-bottom: 20px; max-width: 720px; }
     .hero h1 em { font-style: normal; color: var(--teal); }
     .hero-sub { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.65; max-width: 500px; margin-bottom: 52px; }
 
-    /* ── STATS ── */
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden;
-      background: rgba(255,255,255,0.03); max-width: 860px;
-    }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; background: rgba(255,255,255,0.03); max-width: 860px; }
     .stat { padding: 26px 28px; border-right: 1px solid rgba(255,255,255,0.07); }
     .stat:last-child { border-right: none; }
     .stat-n { font-size: 34px; font-weight: 900; color: var(--teal); letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 5px; }
     .stat-label { font-size: 11px; color: rgba(255,255,255,0.38); font-weight: 500; line-height: 1.4; }
 
-    /* ── SECTIONS ── */
     .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 52px; }
     .kicker { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
     .kicker-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); white-space: nowrap; }
@@ -99,12 +46,19 @@
     .section-hed { font-size: clamp(21px, 2.8vw, 28px); font-weight: 800; letter-spacing: -0.03em; color: var(--black); margin-bottom: 6px; line-height: 1.15; }
     .section-dek { font-size: 13.5px; color: var(--gray-600); margin-bottom: 32px; line-height: 1.6; max-width: 540px; }
 
-    /* ── CAMPAIGN CARDS ── */
+    /* VALUE PROPS */
+    .value-props { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .vp-card { border: 1px solid var(--gray-200); border-radius: 10px; padding: 24px 24px 26px; }
+    .vp-num { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .vp-hed { font-size: 16px; font-weight: 800; color: var(--black); letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 10px; }
+    .vp-body { font-size: 13px; color: var(--gray-600); line-height: 1.65; margin-bottom: 18px; }
+    .vp-stat { padding-top: 16px; border-top: 1px solid var(--gray-200); }
+    .vp-stat-n { font-size: 22px; font-weight: 900; color: var(--black); letter-spacing: -0.03em; display: block; }
+    .vp-stat-l { font-size: 11px; color: var(--gray-400); margin-top: 2px; display: block; }
+
+    /* CAMPAIGNS */
     .campaigns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .campaign-card {
-      background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px;
-      padding: 20px 22px; position: relative; overflow: hidden;
-    }
+    .campaign-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px 22px; position: relative; overflow: hidden; }
     .campaign-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--teal); }
     .campaign-date { font-size: 10.5px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
     .campaign-brand { font-size: 16px; font-weight: 800; color: var(--black); letter-spacing: -0.02em; margin-bottom: 3px; }
@@ -113,94 +67,57 @@
     .campaign-prop { font-size: 11.5px; color: var(--gray-400); display: flex; align-items: center; gap: 6px; }
     .campaign-prop::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--gray-400); flex-shrink: 0; }
     .campaign-stat-row { display: flex; gap: 16px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--gray-200); }
-    .campaign-stat { text-align: left; }
     .campaign-stat-n { font-size: 18px; font-weight: 800; color: var(--black); letter-spacing: -0.03em; display: block; }
     .campaign-stat-l { font-size: 10.5px; color: var(--gray-400); font-weight: 500; }
 
-    /* ── PHOTO GRID ── */
+    /* PHOTOS */
     .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .photo-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--gray-200); position: relative; }
     .photo-card img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--gray-100); }
     .photo-caption { padding: 12px 14px 14px; background: var(--white); }
     .photo-brand { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 2px; }
     .photo-prop { font-size: 11px; color: var(--gray-400); line-height: 1.4; }
-    .verified-badge {
-      position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(4px); color: var(--teal); font-size: 9.5px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.6px; padding: 3px 8px; border-radius: 100px;
-    }
+    .verified-badge { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); color: var(--teal); font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 3px 8px; border-radius: 100px; }
 
-    /* ── PROPERTIES ── */
+    /* PROPERTIES */
     .props-bg { background: var(--gray-100); }
     .props-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .prop-row {
-      display: flex; align-items: center; justify-content: space-between;
-      background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; padding: 14px 16px;
-    }
+    .prop-row { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; padding: 14px 16px; }
     .prop-name { font-size: 13.5px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
     .prop-location { font-size: 11.5px; color: var(--gray-400); margin-top: 2px; }
     .prop-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
 
-    /* ── CATEGORY OPPORTUNITY ── */
-    .missed-section {
-      background: #0d0f10;
-      padding: 72px 52px;
-      border-top: 1px solid rgba(255,137,0,0.15);
-      border-bottom: 1px solid rgba(255,137,0,0.15);
-    }
+    /* CATEGORY OPPORTUNITY */
+    .missed-section { background: #0d0f10; padding: 72px 52px; border-top: 1px solid rgba(255,137,0,0.15); border-bottom: 1px solid rgba(255,137,0,0.15); }
     .missed-inner { max-width: 1080px; margin: 0 auto; }
-    .missed-math {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-      background: rgba(255,137,0,0.12); border-radius: 10px; overflow: hidden; max-width: 720px;
-    }
+    .missed-math { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,137,0,0.12); border-radius: 10px; overflow: hidden; max-width: 720px; }
     .missed-cell { background: #161819; padding: 26px 28px; }
     .missed-n { font-size: 32px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 6px; }
     .missed-label { font-size: 11.5px; color: rgba(255,255,255,0.38); line-height: 1.5; }
     .missed-formula { font-size: 10px; color: rgba(255,255,255,0.18); margin-top: 8px; display: block; }
 
-    /* ── PITCH BAND ── */
+    /* PITCH */
     .pitch { background: var(--dark); padding: 80px 52px; position: relative; overflow: hidden; }
-    .pitch::before {
-      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-      width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(19,186,213,0.09) 0%, transparent 65%); pointer-events: none;
-    }
-    .pitch-inner {
-      max-width: 1080px; margin: 0 auto; display: flex; align-items: center;
-      justify-content: space-between; gap: 56px; flex-wrap: wrap; position: relative; z-index: 1;
-    }
+    .pitch::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(19,186,213,0.09) 0%, transparent 65%); pointer-events: none; }
+    .pitch-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 56px; flex-wrap: wrap; position: relative; z-index: 1; }
     .pitch-left { flex: 1; min-width: 280px; }
     .pitch-left h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--white); margin-bottom: 16px; }
     .pitch-left h2 em { font-style: normal; color: var(--teal); }
     .pitch-left p { font-size: 15px; color: rgba(255,255,255,0.42); line-height: 1.7; max-width: 440px; }
     .pitch-right { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
-    .pitch-cta {
-      display: inline-flex; align-items: center; gap: 8px; background: var(--orange);
-      color: var(--white); font-size: 14px; font-weight: 700; padding: 15px 32px;
-      border-radius: 6px; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap;
-    }
+    .pitch-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); font-size: 14px; font-weight: 700; padding: 15px 32px; border-radius: 6px; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; }
     .pitch-note { font-size: 11px; color: rgba(255,255,255,0.22); text-align: center; }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--black); border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 24px 52px; display: flex; align-items: center; justify-content: space-between;
-    }
+    footer { background: var(--black); border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 52px; display: flex; align-items: center; justify-content: space-between; }
     footer img { height: 18px; filter: brightness(0) invert(1); opacity: 0.4; }
     footer p { font-size: 11.5px; color: rgba(255,255,255,0.18); }
 
     @media (max-width: 860px) {
-      header { padding: 0 24px; }
-      .hero { padding: 52px 24px; }
-      .wrap { padding: 52px 24px; }
-      .stats-row { grid-template-columns: repeat(2,1fr); }
-      .campaigns { grid-template-columns: 1fr; }
-      .photos { grid-template-columns: repeat(2,1fr); }
-      .props-grid { grid-template-columns: 1fr; }
-      .missed-section { padding: 52px 24px; }
+      header, .hero, .wrap, .missed-section, .pitch, footer { padding-left: 24px; padding-right: 24px; }
+      .hero { padding-top: 52px; padding-bottom: 52px; }
+      .stats-row, .value-props, .campaigns, .photos, .props-grid { grid-template-columns: 1fr; }
       .missed-math { grid-template-columns: 1fr; max-width: 100%; }
-      .pitch { padding: 60px 24px; }
       .pitch-inner { flex-direction: column; gap: 32px; }
-      footer { padding: 20px 24px; }
     }
   </style>
 </head>
@@ -209,9 +126,7 @@
 <!-- HEADER -->
 <header>
   <div class="header-left">
-    <img class="recess-logo"
-      src="https://cdn.prod.website-files.com/64ff2fd4c0c0c110f9ca6543/64ff74900e799e5bd71e5bca_recess.svg"
-      alt="recess">
+    <img class="recess-logo" src="https://cdn.prod.website-files.com/64ff2fd4c0c0c110f9ca6543/64ff74900e799e5bd71e5bca_recess.svg" alt="recess">
     <div class="header-divider"></div>
     <span class="header-label">Willow Bridge Property Company</span>
   </div>
@@ -221,36 +136,64 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span></span>
-      Already working together
-    </div>
-    <h1>Willow Bridge is<br>already <em>earning</em> on Recess.</h1>
-    <p class="hero-sub">8 properties. 4 major brands. 8,960 samples delivered to residents. Here's exactly what's happened — and what the rest of your portfolio is leaving on the table.</p>
-
+    <div class="hero-eyebrow"><span></span>Already working together</div>
+    <h1>Willow Bridge is<br>already <em>on Recess.</em></h1>
+    <p class="hero-sub">8 properties listed. 4 major brands activated. 8,960 samples delivered to your residents. Here's what your listed properties are experiencing — and what the rest of your portfolio is missing.</p>
     <div class="stats-row">
-      <div class="stat">
-        <span class="stat-n">8</span>
-        <span class="stat-label">Willow Bridge properties<br>listed on Recess</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">4</span>
-        <span class="stat-label">Major brands<br>activated at your properties</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">8,960</span>
-        <span class="stat-label">Samples delivered<br>to your residents</span>
-      </div>
-      <div class="stat">
-        <span class="stat-n">$7,254</span>
-        <span class="stat-label">Brand revenue<br>generated for listed properties</span>
-      </div>
+      <div class="stat"><span class="stat-n">8</span><span class="stat-label">Willow Bridge properties<br>listed on Recess</span></div>
+      <div class="stat"><span class="stat-n">4</span><span class="stat-label">Major brands<br>activated at your properties</span></div>
+      <div class="stat"><span class="stat-n">8,960</span><span class="stat-label">Samples delivered<br>to your residents</span></div>
+      <div class="stat"><span class="stat-n">$7,254</span><span class="stat-label">Brand revenue<br>generated for listed properties</span></div>
     </div>
   </div>
 </section>
 
+<!-- WHY OPERATORS LIST -->
+<div class="wrap" style="padding-bottom: 40px;">
+  <div class="kicker">
+    <span class="kicker-label">Why operators list</span>
+    <div class="kicker-line"></div>
+  </div>
+  <h2 class="section-hed">The money is third. Here's what actually matters.</h2>
+  <p class="section-dek">Operators with large portfolios on Recess don't lead with payouts. They lead with what it does for their residents — and what it tells them about their buildings.</p>
+
+  <div class="value-props">
+
+    <div class="vp-card">
+      <div class="vp-num" style="color: var(--teal);">01 · Resident experience</div>
+      <div class="vp-hed">A branded amenity your residents didn't know they had.</div>
+      <div class="vp-body">Brands show up to your lobbies, mailrooms, and common areas — fully self-managed. Residents get free product. Your property gets the credit for the experience. Zero overhead, zero coordination on your end.</div>
+      <div class="vp-stat">
+        <span class="vp-stat-n">8,960</span>
+        <span class="vp-stat-l">samples delivered to Willow Bridge residents so far</span>
+      </div>
+    </div>
+
+    <div class="vp-card">
+      <div class="vp-num" style="color: var(--teal);">02 · Audience intelligence</div>
+      <div class="vp-hed">Know exactly what brands want to reach your residents.</div>
+      <div class="vp-body">Every campaign reveals which categories, demographics, and price points brands are actively investing to reach. That's real-time signal about who lives in your portfolio — and what they're worth to the market.</div>
+      <div class="vp-stat">
+        <span class="vp-stat-n">355</span>
+        <span class="vp-stat-l">brands actively searching for properties like yours right now</span>
+      </div>
+    </div>
+
+    <div class="vp-card" style="background: rgba(19,186,213,0.02);">
+      <div class="vp-num" style="color: var(--gray-400);">03 · Revenue</div>
+      <div class="vp-hed">And you get paid for it, too.</div>
+      <div class="vp-body">Operators earn a share of every brand campaign that runs at their property. No invoices. No management. It accumulates quietly — and at scale across a full portfolio, it's not nothing.</div>
+      <div class="vp-stat">
+        <span class="vp-stat-n">$7,254</span>
+        <span class="vp-stat-l">earned across 8 listed Willow Bridge properties</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- CAMPAIGNS -->
-<div class="wrap">
+<div class="wrap" style="padding-top: 0;">
   <div class="kicker">
     <span class="kicker-label">Campaigns run at Willow Bridge</span>
     <div class="kicker-line"></div>
@@ -259,7 +202,6 @@
   <p class="section-dek">Every campaign below ran at a listed Willow Bridge property. Brands found the venue, paid the operator, activated with residents.</p>
 
   <div class="campaigns">
-
     <div class="campaign-card">
       <div class="campaign-date">May 2024</div>
       <div class="campaign-brand">Magnolia Bakery</div>
@@ -269,14 +211,8 @@
         <div class="campaign-prop">White Oaks at Wilton — Wilton, CT</div>
       </div>
       <div class="campaign-stat-row">
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">2</span>
-          <span class="campaign-stat-l">Properties activated</span>
-        </div>
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">NY · CT</span>
-          <span class="campaign-stat-l">Markets covered</span>
-        </div>
+        <div><span class="campaign-stat-n">2</span><span class="campaign-stat-l">Properties activated</span></div>
+        <div><span class="campaign-stat-n">NY · CT</span><span class="campaign-stat-l">Markets covered</span></div>
       </div>
     </div>
 
@@ -292,14 +228,8 @@
         <div class="campaign-prop">The Nines at Wellesley Park — Wellesley, MA</div>
       </div>
       <div class="campaign-stat-row">
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">5</span>
-          <span class="campaign-stat-l">Properties activated</span>
-        </div>
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">NY · MA · CT</span>
-          <span class="campaign-stat-l">Markets covered</span>
-        </div>
+        <div><span class="campaign-stat-n">5</span><span class="campaign-stat-l">Properties activated</span></div>
+        <div><span class="campaign-stat-n">NY · MA · CT</span><span class="campaign-stat-l">Markets covered</span></div>
       </div>
     </div>
 
@@ -312,14 +242,8 @@
         <div class="campaign-prop">White Oaks at Wilton — Wilton, CT</div>
       </div>
       <div class="campaign-stat-row">
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">2</span>
-          <span class="campaign-stat-l">Properties activated</span>
-        </div>
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">Contest</span>
-          <span class="campaign-stat-l">Resident engagement mechanic</span>
-        </div>
+        <div><span class="campaign-stat-n">2</span><span class="campaign-stat-l">Properties activated</span></div>
+        <div><span class="campaign-stat-n">Contest</span><span class="campaign-stat-l">Resident engagement mechanic</span></div>
       </div>
     </div>
 
@@ -334,62 +258,35 @@
         <div class="campaign-prop">The Lofts at Harmony Mills — Cohoes, NY</div>
       </div>
       <div class="campaign-stat-row" style="border-color: rgba(19,186,213,0.15);">
-        <div class="campaign-stat">
-          <span class="campaign-stat-n">4</span>
-          <span class="campaign-stat-l">Properties activated</span>
-        </div>
-        <div class="campaign-stat">
-          <span class="campaign-stat-n" style="color: var(--orange);">Live</span>
-          <span class="campaign-stat-l">Currently running</span>
-        </div>
+        <div><span class="campaign-stat-n">4</span><span class="campaign-stat-l">Properties activated</span></div>
+        <div><span class="campaign-stat-n" style="color: var(--orange);">Live</span><span class="campaign-stat-l">Currently running</span></div>
       </div>
     </div>
-
   </div>
 </div>
 
 <!-- PHOTOS -->
-<div style="background: var(--gray-100); padding: 0;">
+<div style="background: var(--gray-100);">
   <div class="wrap">
-    <div class="kicker">
-      <span class="kicker-label">Real activation photos</span>
-      <div class="kicker-line"></div>
-    </div>
+    <div class="kicker"><span class="kicker-label">Real activation photos</span><div class="kicker-line"></div></div>
     <h2 class="section-hed">From your properties. With your residents.</h2>
     <p class="section-dek">Verified photos from completed activations at Willow Bridge properties.</p>
-
     <div class="photos">
-
       <div class="photo-card">
-        <img src="https://res.cloudinary.com/recess-live/image/upload/v1732304008/default/whugy5gfp8h6pc0xjv6c.jpg"
-          alt="Nick's Protein Bar contest at Kinwood Apartments">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1732304008/default/whugy5gfp8h6pc0xjv6c.jpg" alt="Nick's at Kinwood">
         <div class="verified-badge">✓ Verified</div>
-        <div class="photo-caption">
-          <div class="photo-brand">Nick's Protein Bars</div>
-          <div class="photo-prop">Kinwood Apartments — Rensselaer, NY</div>
-        </div>
+        <div class="photo-caption"><div class="photo-brand">Nick's Protein Bars</div><div class="photo-prop">Kinwood Apartments — Rensselaer, NY</div></div>
       </div>
-
       <div class="photo-card">
-        <img src="https://res.cloudinary.com/recess-live/image/upload/v1730484494/default/g4nnjgtn62mfx73uylzl.jpg"
-          alt="General Mills at The Nines at Wellesley Park">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1730484494/default/g4nnjgtn62mfx73uylzl.jpg" alt="General Mills at Wellesley">
         <div class="verified-badge">✓ Verified</div>
-        <div class="photo-caption">
-          <div class="photo-brand">General Mills</div>
-          <div class="photo-prop">The Nines at Wellesley Park — Wellesley, MA</div>
-        </div>
+        <div class="photo-caption"><div class="photo-brand">General Mills</div><div class="photo-prop">The Nines at Wellesley Park — Wellesley, MA</div></div>
       </div>
-
       <div class="photo-card">
-        <img src="https://res.cloudinary.com/recess-live/image/upload/v1751489613/default/gszjqq9lzhehv4iwwyvr.jpg"
-          alt="Trolli at Chestnut Place">
+        <img src="https://res.cloudinary.com/recess-live/image/upload/v1751489613/default/gszjqq9lzhehv4iwwyvr.jpg" alt="Trolli at Chestnut Place">
         <div class="verified-badge">✓ Verified</div>
-        <div class="photo-caption">
-          <div class="photo-brand">Trolli</div>
-          <div class="photo-prop">Chestnut Place — Ashland, MA</div>
-        </div>
+        <div class="photo-caption"><div class="photo-brand">Trolli</div><div class="photo-prop">Chestnut Place — Ashland, MA</div></div>
       </div>
-
     </div>
   </div>
 </div>
@@ -397,70 +294,18 @@
 <!-- PROPERTIES -->
 <div class="props-bg">
   <div class="wrap" style="padding-top: 0;">
-    <div class="kicker">
-      <span class="kicker-label">Active Willow Bridge properties</span>
-      <div class="kicker-line"></div>
-    </div>
-    <h2 class="section-hed">8 properties generating brand revenue today.</h2>
+    <div class="kicker"><span class="kicker-label">Active Willow Bridge properties</span><div class="kicker-line"></div></div>
+    <h2 class="section-hed">8 properties already in the network.</h2>
     <p class="section-dek">Every property below has accepted at least one brand offer through Recess.</p>
-
     <div class="props-grid">
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">Kinwood Apartments</div>
-          <div class="prop-location">Rensselaer, NY — most active (4 brands)</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">The Lofts at Harmony Mills</div>
-          <div class="prop-location">Cohoes, NY</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">Abraxas at 90 State</div>
-          <div class="prop-location">Albany, NY</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">Chestnut Place</div>
-          <div class="prop-location">Ashland, MA</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">The Nines at Wellesley Park</div>
-          <div class="prop-location">Wellesley, MA</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">Lumiere</div>
-          <div class="prop-location">Medford, MA</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">White Oaks at Wilton</div>
-          <div class="prop-location">Wilton, CT</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
-      <div class="prop-row">
-        <div>
-          <div class="prop-name">Residences at The Summit</div>
-          <div class="prop-location">Danbury, CT</div>
-        </div>
-        <div class="prop-dot"></div>
-      </div>
+      <div class="prop-row"><div><div class="prop-name">Kinwood Apartments</div><div class="prop-location">Rensselaer, NY — most active (4 brands)</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">The Lofts at Harmony Mills</div><div class="prop-location">Cohoes, NY</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">Abraxas at 90 State</div><div class="prop-location">Albany, NY</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">Chestnut Place</div><div class="prop-location">Ashland, MA</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">The Nines at Wellesley Park</div><div class="prop-location">Wellesley, MA</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">Lumiere</div><div class="prop-location">Medford, MA</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">White Oaks at Wilton</div><div class="prop-location">Wilton, CT</div></div><div class="prop-dot"></div></div>
+      <div class="prop-row"><div><div class="prop-name">Residences at The Summit</div><div class="prop-location">Danbury, CT</div></div><div class="prop-dot"></div></div>
     </div>
   </div>
 </div>
@@ -472,19 +317,13 @@
       <span class="kicker-label" style="color: var(--orange);">Category opportunity</span>
       <div class="kicker-line" style="background: rgba(255,137,0,0.2);"></div>
     </div>
-
     <h2 style="font-size: clamp(24px, 3.2vw, 38px); font-weight: 900; color: #ffffff; letter-spacing: -0.035em; margin-bottom: 14px; line-height: 1.08;">
       Top operators in your category<br>earn <span style="color: var(--orange);">$128K+ from 60 properties.</span>
     </h2>
     <p style="font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 6px; max-width: 600px; line-height: 1.7;">
-      Cardinal Group, Avenue5, and Coastal Ridge — the top conventional housing operators on Recess — earn
-      <strong style="color: rgba(255,255,255,0.72);">$2,134 per property per year.</strong>
-      That's 2.5× what Willow Bridge earns today. The gap isn't market conditions. It's inventory depth:
-      operators who list their full portfolio attract more brands, win more campaigns, and compound returns over time.
+      Cardinal Group, Avenue5, and Coastal Ridge earn <strong style="color: rgba(255,255,255,0.72);">$2,134 per property per year</strong> — 2.5× what Willow Bridge earns today. The difference is inventory depth: operators who list their full portfolio attract more brands, generate more data, and earn more per building over time.
     </p>
-    <p style="font-size: 11.5px; color: rgba(255,255,255,0.2); margin-bottom: 40px; max-width: 600px; line-height: 1.5;">
-      Source: conventional_housing category · Recess platform data · operators with 2+ active properties
-    </p>
+    <p style="font-size: 11.5px; color: rgba(255,255,255,0.2); margin-bottom: 40px; line-height: 1.5;">Source: conventional_housing category · Recess platform · operators with 2+ active properties</p>
 
     <div class="missed-math">
       <div class="missed-cell">
@@ -505,22 +344,12 @@
     </div>
 
     <div style="margin-top: 20px; padding: 16px 22px; background: rgba(255,137,0,0.05); border: 1px solid rgba(255,137,0,0.14); border-radius: 8px; max-width: 720px; display: flex; gap: 32px; flex-wrap: wrap;">
-      <div>
-        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Willow Bridge today</div>
-        <div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$844 / property</div>
-      </div>
-      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px; font-weight: 300;">→</div>
-      <div>
-        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Category leaders</div>
-        <div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$2,134 / property</div>
-      </div>
-      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px; font-weight: 300;">→</div>
-      <div>
-        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Gap across full portfolio</div>
-        <div style="font-size: 15px; font-weight: 700; color: var(--orange);">$77K / year behind leaders</div>
-      </div>
+      <div><div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Willow Bridge today</div><div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$844 / property</div></div>
+      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px;">→</div>
+      <div><div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Category leaders</div><div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$2,134 / property</div></div>
+      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px;">→</div>
+      <div><div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Gap across full portfolio</div><div style="font-size: 15px; font-weight: 700; color: var(--orange);">$77K / year behind leaders</div></div>
     </div>
-
   </div>
 </section>
 
@@ -528,15 +357,13 @@
 <section class="pitch">
   <div class="pitch-inner">
     <div class="pitch-left">
-      <h2>These 8 are earning.<br>The rest of your portfolio <em>isn't.</em></h2>
-      <p>Willow Bridge manages properties across the country. The 8 listed here are getting brand deals, samples, and payout. Every unlisted property is invisible to 355 brands actively searching for venues right now. Listing is free and takes two minutes per property.</p>
+      <h2>8 properties in.<br>The rest of your portfolio <em>isn't.</em></h2>
+      <p>Every unlisted Willow Bridge property is invisible to 355 brands actively searching for venues right now. Residents at those buildings don't get the experience. You don't get the data. Listing is free and takes two minutes per property.</p>
     </div>
     <div class="pitch-right">
       <a href="https://app.recess.is/register" class="pitch-cta">
         List Remaining Properties
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-          <path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <p class="pitch-note">Free to list · No commitment · Brands come to you</p>
     </div>
