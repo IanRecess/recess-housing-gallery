@@ -42,472 +42,148 @@
       justify-content: space-between;
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .recess-logo {
-      height: 22px;
-      filter: brightness(0) invert(1);
-      opacity: 0.9;
-    }
-    .header-divider {
-      width: 1px;
-      height: 20px;
-      background: rgba(255,255,255,0.15);
-    }
-    .header-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.4);
-      letter-spacing: 0.02em;
-    }
+    .header-left { display: flex; align-items: center; gap: 16px; }
+    .recess-logo { height: 22px; filter: brightness(0) invert(1); opacity: 0.9; }
+    .header-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+    .header-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; }
     .header-badge {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--teal);
-      background: var(--teal-dim);
-      border: 1px solid rgba(19,186,213,0.2);
-      padding: 4px 10px;
-      border-radius: 100px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      font-size: 11px; font-weight: 700; color: var(--teal);
+      background: var(--teal-dim); border: 1px solid rgba(19,186,213,0.2);
+      padding: 4px 10px; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase;
     }
 
     /* ── HERO ── */
-    .hero {
-      background: var(--dark);
-      padding: 72px 52px 64px;
-      position: relative;
-      overflow: hidden;
-    }
+    .hero { background: var(--dark); padding: 72px 52px 64px; position: relative; overflow: hidden; }
     .hero::before {
-      content: '';
-      position: absolute;
-      top: -100px; right: -100px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(19,186,213,0.1) 0%, transparent 65%);
-      pointer-events: none;
+      content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(19,186,213,0.1) 0%, transparent 65%); pointer-events: none;
     }
     .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: -60px;
-      width: 350px; height: 350px;
-      background: radial-gradient(circle, rgba(255,137,0,0.07) 0%, transparent 60%);
-      pointer-events: none;
+      content: ''; position: absolute; bottom: -60px; left: -60px; width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(255,137,0,0.07) 0%, transparent 60%); pointer-events: none;
     }
-    .hero-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
+    .hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
     .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--teal-dim);
-      border: 1px solid rgba(19,186,213,0.2);
-      color: var(--teal);
-      font-size: 10.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 5px 13px;
-      border-radius: 100px;
-      margin-bottom: 28px;
+      display: inline-flex; align-items: center; gap: 8px; background: var(--teal-dim);
+      border: 1px solid rgba(19,186,213,0.2); color: var(--teal); font-size: 10.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.2px; padding: 5px 13px; border-radius: 100px; margin-bottom: 28px;
     }
     .hero-eyebrow span {
-      width: 5px; height: 5px;
-      background: var(--teal);
-      border-radius: 50%;
+      width: 5px; height: 5px; background: var(--teal); border-radius: 50%;
       animation: pulse 2s ease-in-out infinite;
     }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
     .hero h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      font-weight: 900;
-      letter-spacing: -0.035em;
-      line-height: 1.02;
-      color: var(--white);
-      margin-bottom: 20px;
-      max-width: 720px;
+      font-size: clamp(36px, 5vw, 58px); font-weight: 900; letter-spacing: -0.035em;
+      line-height: 1.02; color: var(--white); margin-bottom: 20px; max-width: 720px;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--teal);
-    }
-    .hero-sub {
-      font-size: 16px;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.65;
-      max-width: 500px;
-      margin-bottom: 52px;
-    }
+    .hero h1 em { font-style: normal; color: var(--teal); }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.65; max-width: 500px; margin-bottom: 52px; }
 
     /* ── STATS ── */
     .stats-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.03);
-      max-width: 860px;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden;
+      background: rgba(255,255,255,0.03); max-width: 860px;
     }
-    .stat {
-      padding: 26px 28px;
-      border-right: 1px solid rgba(255,255,255,0.07);
-    }
+    .stat { padding: 26px 28px; border-right: 1px solid rgba(255,255,255,0.07); }
     .stat:last-child { border-right: none; }
-    .stat-n {
-      font-size: 34px;
-      font-weight: 900;
-      color: var(--teal);
-      letter-spacing: -0.04em;
-      line-height: 1;
-      display: block;
-      margin-bottom: 5px;
-    }
-    .stat-label {
-      font-size: 11px;
-      color: rgba(255,255,255,0.38);
-      font-weight: 500;
-      line-height: 1.4;
-    }
+    .stat-n { font-size: 34px; font-weight: 900; color: var(--teal); letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 5px; }
+    .stat-label { font-size: 11px; color: rgba(255,255,255,0.38); font-weight: 500; line-height: 1.4; }
 
     /* ── SECTIONS ── */
     .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 52px; }
-
-    .kicker {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .kicker-label {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--teal);
-      white-space: nowrap;
-    }
-    .kicker-line {
-      flex: 1;
-      height: 1px;
-      background: var(--gray-200);
-    }
-    .section-hed {
-      font-size: clamp(21px, 2.8vw, 28px);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--black);
-      margin-bottom: 6px;
-      line-height: 1.15;
-    }
-    .section-dek {
-      font-size: 13.5px;
-      color: var(--gray-600);
-      margin-bottom: 32px;
-      line-height: 1.6;
-      max-width: 540px;
-    }
+    .kicker { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .kicker-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--teal); white-space: nowrap; }
+    .kicker-line { flex: 1; height: 1px; background: var(--gray-200); }
+    .section-hed { font-size: clamp(21px, 2.8vw, 28px); font-weight: 800; letter-spacing: -0.03em; color: var(--black); margin-bottom: 6px; line-height: 1.15; }
+    .section-dek { font-size: 13.5px; color: var(--gray-600); margin-bottom: 32px; line-height: 1.6; max-width: 540px; }
 
     /* ── CAMPAIGN CARDS ── */
-    .campaigns {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
+    .campaigns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
     .campaign-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 10px;
-      padding: 20px 22px;
-      position: relative;
-      overflow: hidden;
+      background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px;
+      padding: 20px 22px; position: relative; overflow: hidden;
     }
-    .campaign-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px; height: 100%;
-      background: var(--teal);
-    }
-    .campaign-date {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 6px;
-    }
-    .campaign-brand {
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--black);
-      letter-spacing: -0.02em;
-      margin-bottom: 3px;
-    }
-    .campaign-product {
-      font-size: 12.5px;
-      color: var(--gray-600);
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-    .campaign-props {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .campaign-prop {
-      font-size: 11.5px;
-      color: var(--gray-400);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .campaign-prop::before {
-      content: '';
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--gray-400);
-      flex-shrink: 0;
-    }
-    .campaign-stat-row {
-      display: flex;
-      gap: 16px;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid var(--gray-200);
-    }
+    .campaign-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--teal); }
+    .campaign-date { font-size: 10.5px; font-weight: 600; color: var(--teal); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .campaign-brand { font-size: 16px; font-weight: 800; color: var(--black); letter-spacing: -0.02em; margin-bottom: 3px; }
+    .campaign-product { font-size: 12.5px; color: var(--gray-600); margin-bottom: 12px; line-height: 1.4; }
+    .campaign-props { display: flex; flex-direction: column; gap: 3px; }
+    .campaign-prop { font-size: 11.5px; color: var(--gray-400); display: flex; align-items: center; gap: 6px; }
+    .campaign-prop::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--gray-400); flex-shrink: 0; }
+    .campaign-stat-row { display: flex; gap: 16px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--gray-200); }
     .campaign-stat { text-align: left; }
-    .campaign-stat-n {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--black);
-      letter-spacing: -0.03em;
-      display: block;
-    }
-    .campaign-stat-l {
-      font-size: 10.5px;
-      color: var(--gray-400);
-      font-weight: 500;
-    }
+    .campaign-stat-n { font-size: 18px; font-weight: 800; color: var(--black); letter-spacing: -0.03em; display: block; }
+    .campaign-stat-l { font-size: 10.5px; color: var(--gray-400); font-weight: 500; }
 
     /* ── PHOTO GRID ── */
-    .photos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .photo-card {
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      position: relative;
-    }
-    .photo-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      background: var(--gray-100);
-    }
-    .photo-caption {
-      padding: 12px 14px 14px;
-      background: var(--white);
-    }
-    .photo-brand {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: -0.02em;
-      margin-bottom: 2px;
-    }
-    .photo-prop {
-      font-size: 11px;
-      color: var(--gray-400);
-      line-height: 1.4;
-    }
+    .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .photo-card { border-radius: 10px; overflow: hidden; border: 1px solid var(--gray-200); position: relative; }
+    .photo-card img { width: 100%; height: 220px; object-fit: cover; display: block; background: var(--gray-100); }
+    .photo-caption { padding: 12px 14px 14px; background: var(--white); }
+    .photo-brand { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 2px; }
+    .photo-prop { font-size: 11px; color: var(--gray-400); line-height: 1.4; }
     .verified-badge {
-      position: absolute;
-      top: 10px; right: 10px;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(4px);
-      color: var(--teal);
-      font-size: 9.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      padding: 3px 8px;
-      border-radius: 100px;
+      position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(4px); color: var(--teal); font-size: 9.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.6px; padding: 3px 8px; border-radius: 100px;
     }
 
     /* ── PROPERTIES ── */
-    .props-bg {
-      background: var(--gray-100);
-    }
-    .props-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
+    .props-bg { background: var(--gray-100); }
+    .props-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .prop-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      padding: 14px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px; padding: 14px 16px;
     }
-    .prop-name {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: -0.01em;
-    }
-    .prop-location {
-      font-size: 11.5px;
-      color: var(--gray-400);
-      margin-top: 2px;
-    }
-    .prop-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--teal);
-      flex-shrink: 0;
-    }
+    .prop-name { font-size: 13.5px; font-weight: 700; color: var(--black); letter-spacing: -0.01em; }
+    .prop-location { font-size: 11.5px; color: var(--gray-400); margin-top: 2px; }
+    .prop-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
 
-    /* ── MISSED OPPORTUNITY ── */
+    /* ── CATEGORY OPPORTUNITY ── */
     .missed-section {
       background: #0d0f10;
       padding: 72px 52px;
       border-top: 1px solid rgba(255,137,0,0.15);
       border-bottom: 1px solid rgba(255,137,0,0.15);
     }
-    .missed-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
+    .missed-inner { max-width: 1080px; margin: 0 auto; }
     .missed-math {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,137,0,0.12);
-      border-radius: 10px;
-      overflow: hidden;
-      max-width: 700px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: rgba(255,137,0,0.12); border-radius: 10px; overflow: hidden; max-width: 720px;
     }
-    .missed-cell {
-      background: #161819;
-      padding: 26px 28px;
-    }
-    .missed-n {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      display: block;
-      margin-bottom: 6px;
-    }
-    .missed-label {
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.38);
-      line-height: 1.5;
-    }
-    .missed-formula {
-      font-size: 10px;
-      color: rgba(255,255,255,0.18);
-      margin-top: 8px;
-      display: block;
-    }
+    .missed-cell { background: #161819; padding: 26px 28px; }
+    .missed-n { font-size: 32px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; display: block; margin-bottom: 6px; }
+    .missed-label { font-size: 11.5px; color: rgba(255,255,255,0.38); line-height: 1.5; }
+    .missed-formula { font-size: 10px; color: rgba(255,255,255,0.18); margin-top: 8px; display: block; }
 
     /* ── PITCH BAND ── */
-    .pitch {
-      background: var(--dark);
-      padding: 80px 52px;
-      position: relative;
-      overflow: hidden;
-    }
+    .pitch { background: var(--dark); padding: 80px 52px; position: relative; overflow: hidden; }
     .pitch::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 700px; height: 400px;
-      background: radial-gradient(ellipse, rgba(19,186,213,0.09) 0%, transparent 65%);
-      pointer-events: none;
+      content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 700px; height: 400px; background: radial-gradient(ellipse, rgba(19,186,213,0.09) 0%, transparent 65%); pointer-events: none;
     }
     .pitch-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 56px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
+      max-width: 1080px; margin: 0 auto; display: flex; align-items: center;
+      justify-content: space-between; gap: 56px; flex-wrap: wrap; position: relative; z-index: 1;
     }
     .pitch-left { flex: 1; min-width: 280px; }
-    .pitch-left h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .pitch-left h2 em {
-      font-style: normal;
-      color: var(--teal);
-    }
-    .pitch-left p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.42);
-      line-height: 1.7;
-      max-width: 440px;
-    }
-    .pitch-right {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex-shrink: 0;
-    }
+    .pitch-left h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; color: var(--white); margin-bottom: 16px; }
+    .pitch-left h2 em { font-style: normal; color: var(--teal); }
+    .pitch-left p { font-size: 15px; color: rgba(255,255,255,0.42); line-height: 1.7; max-width: 440px; }
+    .pitch-right { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
     .pitch-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--orange);
-      color: var(--white);
-      font-size: 14px;
-      font-weight: 700;
-      padding: 15px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 8px; background: var(--orange);
+      color: var(--white); font-size: 14px; font-weight: 700; padding: 15px 32px;
+      border-radius: 6px; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap;
     }
-    .pitch-note {
-      font-size: 11px;
-      color: rgba(255,255,255,0.22);
-      text-align: center;
-    }
+    .pitch-note { font-size: 11px; color: rgba(255,255,255,0.22); text-align: center; }
 
     /* ── FOOTER ── */
     footer {
-      background: var(--black);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 24px 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background: var(--black); border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 24px 52px; display: flex; align-items: center; justify-content: space-between;
     }
     footer img { height: 18px; filter: brightness(0) invert(1); opacity: 0.4; }
     footer p { font-size: 11.5px; color: rgba(255,255,255,0.18); }
@@ -789,33 +465,62 @@
   </div>
 </div>
 
-<!-- MISSED OPPORTUNITY -->
+<!-- CATEGORY OPPORTUNITY -->
 <section class="missed-section">
   <div class="missed-inner">
     <div class="kicker">
-      <span class="kicker-label" style="color: var(--orange);">Estimated missed opportunity</span>
+      <span class="kicker-label" style="color: var(--orange);">Category opportunity</span>
       <div class="kicker-line" style="background: rgba(255,137,0,0.2);"></div>
     </div>
-    <h2 style="font-size: clamp(24px, 3.2vw, 38px); font-weight: 900; color: #ffffff; letter-spacing: -0.035em; margin-bottom: 12px; line-height: 1.08;">Your unlisted properties could be<br>generating <span style="color: var(--orange);">~$47,000+ per year.</span></h2>
-    <p style="font-size: 14px; color: rgba(255,255,255,0.38); margin-bottom: 40px; max-width: 540px; line-height: 1.65;">Based entirely on Willow Bridge's own Recess results — no category benchmarks, no projections. Just your data, applied to the rest of your portfolio.</p>
+
+    <h2 style="font-size: clamp(24px, 3.2vw, 38px); font-weight: 900; color: #ffffff; letter-spacing: -0.035em; margin-bottom: 14px; line-height: 1.08;">
+      Top operators in your category<br>earn <span style="color: var(--orange);">$128K+ from 60 properties.</span>
+    </h2>
+    <p style="font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 6px; max-width: 600px; line-height: 1.7;">
+      Cardinal Group, Avenue5, and Coastal Ridge — the top conventional housing operators on Recess — earn
+      <strong style="color: rgba(255,255,255,0.72);">$2,134 per property per year.</strong>
+      That's 2.5× what Willow Bridge earns today. The gap isn't market conditions. It's inventory depth:
+      operators who list their full portfolio attract more brands, win more campaigns, and compound returns over time.
+    </p>
+    <p style="font-size: 11.5px; color: rgba(255,255,255,0.2); margin-bottom: 40px; max-width: 600px; line-height: 1.5;">
+      Source: conventional_housing category · Recess platform data · operators with 2+ active properties
+    </p>
 
     <div class="missed-math">
       <div class="missed-cell">
-        <span class="missed-n" style="color: var(--teal);">$907</span>
-        <span class="missed-label">Avg. brand revenue<br>per listed property</span>
-        <span class="missed-formula">$7,254 ÷ 8 properties</span>
+        <span class="missed-n" style="color: var(--teal);">$2,134</span>
+        <span class="missed-label">Category leader avg<br>GMV per property</span>
+        <span class="missed-formula">Cardinal Group · Avenue5 · Coastal Ridge</span>
       </div>
       <div class="missed-cell" style="border-left: 1px solid rgba(255,137,0,0.12); border-right: 1px solid rgba(255,137,0,0.12);">
-        <span class="missed-n" style="color: var(--teal);">~52</span>
-        <span class="missed-label">Willow Bridge properties<br>not yet on Recess</span>
-        <span class="missed-formula">~60 total portfolio − 8 listed</span>
+        <span class="missed-n" style="color: var(--teal);">~60</span>
+        <span class="missed-label">Total Willow Bridge<br>properties nationwide</span>
+        <span class="missed-formula">9 currently listed on Recess</span>
       </div>
       <div class="missed-cell">
-        <span class="missed-n" style="color: var(--orange);">$47K+</span>
-        <span class="missed-label">Annual revenue<br>sitting uncaptured</span>
-        <span class="missed-formula">$907 × 52 unlisted properties</span>
+        <span class="missed-n" style="color: var(--orange);">$128K+</span>
+        <span class="missed-label">Full portfolio potential<br>at top-operator rates</span>
+        <span class="missed-formula">$2,134 × 60 properties</span>
       </div>
     </div>
+
+    <div style="margin-top: 20px; padding: 16px 22px; background: rgba(255,137,0,0.05); border: 1px solid rgba(255,137,0,0.14); border-radius: 8px; max-width: 720px; display: flex; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Willow Bridge today</div>
+        <div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$844 / property</div>
+      </div>
+      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px; font-weight: 300;">→</div>
+      <div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Category leaders</div>
+        <div style="font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55);">$2,134 / property</div>
+      </div>
+      <div style="display: flex; align-items: center; color: rgba(255,137,0,0.4); font-size: 20px; font-weight: 300;">→</div>
+      <div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 3px;">Gap across full portfolio</div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--orange);">$77K / year behind leaders</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
