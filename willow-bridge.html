@@ -384,6 +384,50 @@
       flex-shrink: 0;
     }
 
+    /* ── MISSED OPPORTUNITY ── */
+    .missed-section {
+      background: #0d0f10;
+      padding: 72px 52px;
+      border-top: 1px solid rgba(255,137,0,0.15);
+      border-bottom: 1px solid rgba(255,137,0,0.15);
+    }
+    .missed-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .missed-math {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,137,0,0.12);
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 700px;
+    }
+    .missed-cell {
+      background: #161819;
+      padding: 26px 28px;
+    }
+    .missed-n {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .missed-label {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.5;
+    }
+    .missed-formula {
+      font-size: 10px;
+      color: rgba(255,255,255,0.18);
+      margin-top: 8px;
+      display: block;
+    }
+
     /* ── PITCH BAND ── */
     .pitch {
       background: var(--dark);
@@ -476,6 +520,8 @@
       .campaigns { grid-template-columns: 1fr; }
       .photos { grid-template-columns: repeat(2,1fr); }
       .props-grid { grid-template-columns: 1fr; }
+      .missed-section { padding: 52px 24px; }
+      .missed-math { grid-template-columns: 1fr; max-width: 100%; }
       .pitch { padding: 60px 24px; }
       .pitch-inner { flex-direction: column; gap: 32px; }
       footer { padding: 20px 24px; }
@@ -742,6 +788,36 @@
     </div>
   </div>
 </div>
+
+<!-- MISSED OPPORTUNITY -->
+<section class="missed-section">
+  <div class="missed-inner">
+    <div class="kicker">
+      <span class="kicker-label" style="color: var(--orange);">Estimated missed opportunity</span>
+      <div class="kicker-line" style="background: rgba(255,137,0,0.2);"></div>
+    </div>
+    <h2 style="font-size: clamp(24px, 3.2vw, 38px); font-weight: 900; color: #ffffff; letter-spacing: -0.035em; margin-bottom: 12px; line-height: 1.08;">Your unlisted properties could be<br>generating <span style="color: var(--orange);">~$47,000+ per year.</span></h2>
+    <p style="font-size: 14px; color: rgba(255,255,255,0.38); margin-bottom: 40px; max-width: 540px; line-height: 1.65;">Based entirely on Willow Bridge's own Recess results — no category benchmarks, no projections. Just your data, applied to the rest of your portfolio.</p>
+
+    <div class="missed-math">
+      <div class="missed-cell">
+        <span class="missed-n" style="color: var(--teal);">$907</span>
+        <span class="missed-label">Avg. brand revenue<br>per listed property</span>
+        <span class="missed-formula">$7,254 ÷ 8 properties</span>
+      </div>
+      <div class="missed-cell" style="border-left: 1px solid rgba(255,137,0,0.12); border-right: 1px solid rgba(255,137,0,0.12);">
+        <span class="missed-n" style="color: var(--teal);">~52</span>
+        <span class="missed-label">Willow Bridge properties<br>not yet on Recess</span>
+        <span class="missed-formula">~60 total portfolio − 8 listed</span>
+      </div>
+      <div class="missed-cell">
+        <span class="missed-n" style="color: var(--orange);">$47K+</span>
+        <span class="missed-label">Annual revenue<br>sitting uncaptured</span>
+        <span class="missed-formula">$907 × 52 unlisted properties</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PITCH -->
 <section class="pitch">
